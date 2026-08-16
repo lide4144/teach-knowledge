@@ -4,8 +4,6 @@ kind: concept
 created: 2026-08-16
 ---
 
-# QAT (Quantization-Aware Training)
-
 # QAT (Quantization-Aware Training) 量化感知训练
 
 ## 面试定义（可直接背）
@@ -25,11 +23,8 @@ Gemma4 是 Google 官方 QAT 到 ~4bit 的模型，所以**只发 Q4_K_M 一个�
 
 选量化档的第一原则：**先看模型是不是 QAT 原生低 bit**，是的话直接拿官方甜点档，不用纠结。
 
-## 相关
-[[GGUF]] [[Gemma4-26B 本地部署实战]]
-
 ## Related
 
-- [[GGUF]]
-- [[MoE (Mixture of Experts)]]
-- [[Gemma4-26B 本地部署实战]]
+- [[gguf|GGUF]]
+- [[moe-mixture-of-experts|MoE (Mixture of Experts)]]
+- [[gemma4-26b-本地部署实战|Gemma4-26B 本地部署实战]]

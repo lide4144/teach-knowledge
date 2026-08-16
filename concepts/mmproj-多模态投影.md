@@ -4,8 +4,6 @@ kind: concept
 created: 2026-08-16
 ---
 
-# mmproj 多模态投影
-
 # mmproj 多模态投影 (Multimodal Projector)
 
 ## 面试定义（可直接背）
@@ -31,11 +29,8 @@ flowchart LR
 - **mmproj 必须和主模型配套**（同系列、同 embedding 维度），但不是所有 HF 页面都会把它放在显眼位置——下载模型时检查有没有配套视觉文件
 - llama.cpp router 模式的 models.ini 里，`mmproj` 路径相对**服务器工作目录**解析，不相对 `--models-dir`
 
-## 相关
-[[GGUF]] [[llama.cpp Router 模式]] [[Gemma4-26B 本地部署实战]]
-
 ## Related
 
-- [[GGUF]]
-- [[llama.cpp Router 模式]]
-- [[Gemma4-26B 本地部署实战]]
+- [[gguf|GGUF]]
+- [[llama-cpp-router-模式|llama.cpp Router 模式]]
+- [[gemma4-26b-本地部署实战|Gemma4-26B 本地部署实战]]

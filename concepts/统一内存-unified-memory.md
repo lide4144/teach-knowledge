@@ -4,8 +4,6 @@ kind: concept
 created: 2026-08-16
 ---
 
-# 统一内存 Unified Memory
-
 # 统一内存 (Unified Memory) APU 推理
 
 ## 面试定义（可直接背）
@@ -22,12 +20,9 @@ created: 2026-08-16
 - **Speculative decoding 收益大**：一次前向验证多个 token，摊薄带宽成本
 - 本机实测：26B-A4B MoE + MTP = 60-78 t/s，同平台稠密 27B 只有 ~18 t/s
 
-## 相关
-[[MoE (Mixture of Experts)]] [[Speculative Decoding]] [[Vulkan vs ROCm 后端]] [[Gemma4-26B 本地部署实战]]
-
 ## Related
 
-- [[MoE (Mixture of Experts)]]
-- [[Speculative Decoding]]
-- [[Vulkan vs ROCm 后端]]
-- [[Gemma4-26B 本地部署实战]]
+- [[moe-mixture-of-experts|MoE (Mixture of Experts)]]
+- [[speculative-decoding|Speculative Decoding]]
+- [[vulkan-vs-rocm-后端|Vulkan vs ROCm 后端]]
+- [[gemma4-26b-本地部署实战|Gemma4-26B 本地部署实战]]

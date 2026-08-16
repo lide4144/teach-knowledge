@@ -4,8 +4,6 @@ kind: concept
 created: 2026-08-16
 ---
 
-# Speculative Decoding
-
 # Speculative Decoding 投机解码
 
 ## 面试定义（可直接背）
@@ -44,13 +42,7 @@ sequenceDiagram
 
 **MTP（Gemma4，Vulkan）**：61-78 t/s，接受率 58-88%，稳定 ✅ 生产配置
 
-**DFlash 完整排查结论**：
-- **Vulkan 后端：DFlash 草稿器图必崩**（首个请求静默死，exit 5 无日志；`-fa on` 崩更快）。26B/35B 两个模型、Q8/BF16 两种草稿均复现 → **是 Vulkan drafter 实现坏了，不是配置问题**
-- **ROCm 后端：DFlash 正常工作！**（用户的"以前成功过"记忆指向 ROCm）
-- **CPU 草稿器（`-ngld 0`）**：稳定但草稿太慢，净减速（22-38 t/s vs 裸跑 58）
-- **关键参数 `--spec-draft-p-min 0.75`**：默认值被上游改成 0.00（issue #25908，肇因提交 d14ce3da "MTP clean-up" #23269），草稿器永不远早退出 → 低置信内容硬猜 → 接受率崩。ROCm 上加 p-min 0.75 后接受率从 **27% → 92%**
-- ROCm + DFlash + n-max 8 + p-min 0.75（Qwen3.6-35B-A3B）：短文 72.7 / 长文 54.9 / 代码 65 t/s，对比 ROCm 裸跑 +43%/+9%
-- **已知冲突：投机解码 + 视觉输入 = 500 错误**（上游已知问题域，参见 open PR #25144 MTP draft crash on vision inputs）。要视觉就别开投机
+**DFlash**：ROCm 上可用（+p-min 0.75 后接受率 27%→92%），Vulkan 后端草稿器图必崩，详见 [[dflash|DFlash]]
 
 **教训**：
 1. `timings.draft_n_accepted/draft_n` 是健康度核心指标，**接受率 <50% 的投机解码是负优化**
@@ -61,13 +53,12 @@ sequenceDiagram
 - 多花一份草稿的显存和计算，换主模型前向次数减少
 - batch 大、带宽不是瓶颈时收益递减
 
-## 相关
-[[MoE (Mixture of Experts)]] [[llama.cpp Router 模式]] [[Vulkan vs ROCm 后端]] [[统一内存 Unified Memory]] [[Gemma4-26B 本地部署实战]]
-
 ## Related
 
-- [[MoE (Mixture of Experts)]]
-- [[llama.cpp Router 模式]]
-- [[Vulkan vs ROCm 后端]]
-- [[统一内存 Unified Memory]]
-- [[Gemma4-26B 本地部署实战]]
+- [[moe-mixture-of-experts|MoE (Mixture of Experts)]]
+- [[llama-cpp-router-模式|llama.cpp Router 模式]]
+- [[vulkan-vs-rocm-后端|Vulkan vs ROCm 后端]]
+- [[统一内存-unified-memory|统一内存 Unified Memory]]
+- [[gemma4-26b-本地部署实战|Gemma4-26B 本地部署实战]]
+- [[dflash|DFlash]]
+- [[gguf|GGUF]]

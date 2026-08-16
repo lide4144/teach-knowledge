@@ -4,8 +4,6 @@ kind: concept
 created: 2026-08-16
 ---
 
-# llama.cpp Router 模式
-
 # llama.cpp Router 模式 vs 单模型模式
 
 ## 两种 serving 形态
@@ -33,12 +31,9 @@ temp = 0.6
 2. **模型名不匹配**：Web UI 把上次用的模型名存 localStorage。单模型模式存的是带路径 id，切到 router 后就报 not found → 重新在下拉框选一次模型即可
 3. 查 router 当前认哪些名字：`curl localhost:8001/v1/models`
 
-## 相关
-[[mmproj 多模态投影]] [[Speculative Decoding]] [[Gemma4-26B 本地部署实战]]
-
 ## Related
 
-- [[mmproj 多模态投影]]
-- [[Speculative Decoding]]
-- [[Vulkan vs ROCm 后端]]
-- [[Gemma4-26B 本地部署实战]]
+- [[mmproj-多模态投影|mmproj 多模态投影]]
+- [[speculative-decoding|Speculative Decoding]]
+- [[vulkan-vs-rocm-后端|Vulkan vs ROCm 后端]]
+- [[gemma4-26b-本地部署实战|Gemma4-26B 本地部署实战]]

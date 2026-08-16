@@ -4,8 +4,6 @@ kind: concept
 created: 2026-08-16
 ---
 
-# Vulkan vs ROCm 后端
-
 # Vulkan vs ROCm 推理后端 (AMD 平台)
 
 ## 面试定义（可直接背）
@@ -29,11 +27,9 @@ ROCm 后端没实现 `TOP_K` 算子 → 每个 token 的 top-k 采样回退 CPU 
 ## 另一个坑：HIP 运行时来源
 日志 `HIP Library Path: C:\Windows\SYSTEM32\amdhip64_7.dll` 说明实际加载的是**显卡驱动自带的 HIP dll**，不是 ROCm 安装目录里那份——版本错配是 ROCm 玄学问题的常见根源。
 
-## 相关
-[[统一内存 Unified Memory]] [[Gemma4-26B 本地部署实战]]
-
 ## Related
 
-- [[统一内存 Unified Memory]]
-- [[MoE (Mixture of Experts)]]
-- [[Gemma4-26B 本地部署实战]]
+- [[统一内存-unified-memory|统一内存 Unified Memory]]
+- [[moe-mixture-of-experts|MoE (Mixture of Experts)]]
+- [[gemma4-26b-本地部署实战|Gemma4-26B 本地部署实战]]
+- [[dflash|DFlash]]

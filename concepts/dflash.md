@@ -4,8 +4,6 @@ kind: concept
 created: 2026-08-16
 ---
 
-# DFlash
-
 # DFlash 草稿器（block-diffusion drafter）
 
 ## 面试定义（可直接背）
@@ -34,14 +32,7 @@ created: 2026-08-16
 
 ## Related
 
-- [[speculative-decoding]]
-- [[vulkan-vs-rocm-后端]]
-- [[gguf]]
-- [[gemma4-26b-本地部署实战]]
-
-## Related
-
-- [[Speculative Decoding]]
-- [[Vulkan vs ROCm 后端]]
-- [[GGUF]]
-- [[Gemma4-26B 本地部署实战]]
+- [[speculative-decoding|Speculative Decoding]]
+- [[vulkan-vs-rocm-后端|Vulkan vs ROCm 后端]]
+- [[gguf|GGUF]]
+- [[gemma4-26b-本地部署实战|Gemma4-26B 本地部署实战]]

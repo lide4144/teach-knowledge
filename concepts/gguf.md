@@ -4,8 +4,6 @@ kind: concept
 created: 2026-08-16
 ---
 
-# GGUF
-
 # GGUF 模型文件格式
 
 ## 面试定义（可直接背）
@@ -27,12 +25,9 @@ F16/BF16 是不量化；IQ/imatrix 系是更激进的压缩。
 - **mmproj（视觉投影）、MTP draft head 也是 GGUF**，只是 architecture 分别是 `clip` 和 draft 头
 - 一个模型可以有"融合版"GGUF（MTP 内嵌）和外挂文件两种形态，部署前先搞清楚手里的文件是哪种
 
-## 相关
-[[QAT (Quantization-Aware Training)]] [[mmproj 多模态投影]] [[Gemma4-26B 本地部署实战]]
-
 ## Related
 
-- [[QAT (Quantization-Aware Training)]]
-- [[mmproj 多模态投影]]
-- [[Speculative Decoding]]
-- [[Gemma4-26B 本地部署实战]]
+- [[qat-quantization-aware-training|QAT (Quantization-Aware Training)]]
+- [[mmproj-多模态投影|mmproj 多模态投影]]
+- [[speculative-decoding|Speculative Decoding]]
+- [[gemma4-26b-本地部署实战|Gemma4-26B 本地部署实战]]

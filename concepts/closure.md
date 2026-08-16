@@ -4,8 +4,6 @@ kind: concept
 created: 2026-08-16
 ---
 
-# Closure
-
 # Closure（闭包）
 
 ## 定义
@@ -47,11 +45,6 @@ for (let i = 0; i < 3; i++) {
   setTimeout(() => console.log(i), 0); // 0, 1, 2
 }
 ```
-
-## 相关概念
-- [[Lexical Scope]]
-- [[First-class Function]]
-- [[Stale Closure]]
 
 ## Related
 

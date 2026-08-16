@@ -4,6 +4,12 @@ kind: concept
 created: 2026-08-16
 ---
 
+---
+title: "Git Rebase"
+kind: concept
+created: 2026-08-16
+---
+
 # Git Rebase
 
 ## 定义

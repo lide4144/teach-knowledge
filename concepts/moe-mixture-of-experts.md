@@ -4,8 +4,6 @@ kind: concept
 created: 2026-08-16
 ---
 
-# MoE (Mixture of Experts)
-
 # MoE (Mixture of Experts) 混合专家
 
 ## 面试定义（可直接背）
@@ -41,12 +39,9 @@ flowchart LR
     E1 & E2 & E3 --> W[加权求和] --> O[输出]
 ```
 
-## 相关
-[[Speculative Decoding]] [[统一内存 Unified Memory]] [[Gemma4-26B 本地部署实战]]
-
 ## Related
 
-- [[Speculative Decoding]]
-- [[统一内存 Unified Memory]]
-- [[GGUF]]
-- [[Gemma4-26B 本地部署实战]]
+- [[speculative-decoding|Speculative Decoding]]
+- [[统一内存-unified-memory|统一内存 Unified Memory]]
+- [[gguf|GGUF]]
+- [[gemma4-26b-本地部署实战|Gemma4-26B 本地部署实战]]
